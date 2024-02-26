@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+@layer components {
+  .accordion-container {
+    @apply border-2 border-sapphire-800 list-none w-3/4 transition-colors duration-300 ease-in-out;
+  }
+  .accordion-container-open {
+    @apply bg-sapphire-800;
+  }
+  .accordion-container:first-child {
+    @apply rounded-t-2xl;
+  }
+  .accordion-container:last-child {
+    @apply rounded-b-2xl;
+  }
+
+  .accordion-header {
+    @apply flex justify-between items-center p-4 font-medium;
+  }
+
+  .accordion-content {
+    @apply overflow-y-hidden transition-all;
+  }
+
+  .accordion-button {
+    @apply border-0 rounded-full flex-grow flex-shrink w-full m-1 p-2 bg-payees_gray font-bold text-white text-center transition-all duration-300 ease-in-out;
+  }
+
+  .accordion-child {
+    @apply opacity-0 flex flex-wrap justify-between overflow-hidden scale-0 transition-all duration-300 ease-in-out;
+  }
+
+  .accordion-child-open {
+    @apply opacity-100 scale-100;
+  }
+
+  .accordion-content {
+    @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+  }
+
+  /* Setze eine sehr große max-height für den geöffneten Zustand */
+  .accordion-container-open .accordion-content {
+    @apply max-h-96; /* Wähle einen Wert, der größer als jeder mögliche Inhalt ist */
+  }
+
+  /* Geschlossener Zustand mit max-height: 0 */
+}

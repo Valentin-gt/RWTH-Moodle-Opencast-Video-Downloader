@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Moodle Video Downloader",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "public/icon16.png",
+      "48": "public/icon48.png",
+      "96": "public/icon96.png",
+      "128": "public/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "public/icon16.png",
+    "48": "public/icon48.png",
+    "96": "public/icon96.png",
+    "128": "public/icon-128.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://engage.streaming.rwth-aachen.de/*paella7/ui/watch.html**"
+      ],
+      "all_frames": true,
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/dist/popup.css",
+        "injectInner.js"
+      ],
+      "matches": [
+        "https://engage.streaming.rwth-aachen.de/*"
+      ]
+    }
+  ]
+}
