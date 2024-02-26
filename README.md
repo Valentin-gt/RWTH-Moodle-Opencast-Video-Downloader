@@ -7,7 +7,7 @@ This is a Chrome extension that allows you to easily download Opencast videos fr
 1. Clone this repository or download the code as a ZIP file and extract it.
 2. Open Google Chrome and navigate to `chrome://extensions`.
 3. Enable "Developer mode" in the top right corner.
-4. Click on "Load unpacked" and select the folder containing the code of this extension.
+4. Click on "Load unpacked" and select the extension folder.
 
 ## Usage
 
