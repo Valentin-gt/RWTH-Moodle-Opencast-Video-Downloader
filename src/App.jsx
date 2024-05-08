@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import Accordion, { AccordionItem } from "./Components/Accordion";
 import NoFile from "./Components/NoFile";
 import "./App.css";
